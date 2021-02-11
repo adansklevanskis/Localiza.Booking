@@ -1,5 +1,4 @@
-﻿using Sdk.EventBus;
-using Sdk.EventBus.Abstractions;
+﻿using Sdk.EventBus.Abstractions;
 using Sdk.EventBus.Events;
 using System;
 using System.Collections.Generic;

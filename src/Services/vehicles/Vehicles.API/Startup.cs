@@ -8,10 +8,8 @@ using Microsoft.OpenApi.Models;
 using Sdk.IntegrationEventLogEF;
 using System;
 using System.IO;
-using System.Linq;
 using System.Reflection;
 using Vehicles.API.Infraestructure;
-using Vehicles.API.Model;
 
 namespace Vehicles.API
 {

@@ -4,6 +4,9 @@ using Vehicles.API.Model;
 
 namespace Vehicles.API.Infraestructure
 {
+    /// <summary>
+    /// Class Vehicle Context
+    /// </summary>
     public class VehicleContext : DbContext
     {
         public VehicleContext(DbContextOptions<VehicleContext> options) : base(options)
@@ -13,11 +16,11 @@ namespace Vehicles.API.Infraestructure
         public DbSet<VehicleBrand> VehicleBrands { get; set; }
         public DbSet<VehicleType> VehicleTypes { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder builder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            builder.ApplyConfiguration(new VehicleBrandEntityTypeConfiguration());
-            builder.ApplyConfiguration(new VehicleTypeEntityTypeConfiguration());
-            builder.ApplyConfiguration(new VehicleEntityTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new VehicleBrandEntityTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new VehicleTypeEntityTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new VehicleEntityTypeConfiguration());
         }
     }
 }

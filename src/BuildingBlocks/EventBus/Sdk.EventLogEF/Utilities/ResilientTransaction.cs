@@ -1,11 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage;
-using Sdk.EventBus.Events;
-using Sdk.IntegrationEventLogEF.Services;
 using System;
-using System.Collections.Generic;
-using System.Data.Common;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Sdk.IntegrationEventLogEF.Utilities
@@ -16,8 +10,8 @@ namespace Sdk.IntegrationEventLogEF.Utilities
         private ResilientTransaction(DbContext context) =>
             _context = context ?? throw new ArgumentNullException(nameof(context));
 
-        public static ResilientTransaction New (DbContext context) =>
-            new ResilientTransaction(context);        
+        public static ResilientTransaction New(DbContext context) =>
+            new ResilientTransaction(context);
 
         public async Task ExecuteAsync(Func<Task> action)
         {

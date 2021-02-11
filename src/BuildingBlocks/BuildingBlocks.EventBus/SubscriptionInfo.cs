@@ -1,5 +1,4 @@
-﻿using Sdk.EventBus;
-using System;
+﻿using System;
 
 namespace Sdk.EventBus
 {
