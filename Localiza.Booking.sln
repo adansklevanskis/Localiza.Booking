@@ -36,6 +36,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "img", "img", "{F19892FA-0BCF-4837-BE21-94B7EE79F8BA}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\Users\137222\Downloads\booking vehicle.png = ..\..\Users\137222\Downloads\booking vehicle.png
+		..\..\Users\137222\Downloads\Microsservicos.png = ..\..\Users\137222\Downloads\Microsservicos.png
 	EndProjectSection
 EndProject
 Global
