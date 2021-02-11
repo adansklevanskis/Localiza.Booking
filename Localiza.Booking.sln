@@ -9,29 +9,34 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{A7
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web Apps", "Web Apps", "{5D7569A4-2CBA-4128-A5E8-04F4BB5BDAE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMvc", "src\Web Apps\WebMvc\WebMvc.csproj", "{E9474FD1-720E-4CAB-ACAB-E9AAC3E364F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebMvc", "src\Web Apps\WebMvc\WebMvc.csproj", "{E9474FD1-720E-4CAB-ACAB-E9AAC3E364F4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Simulation", "Simulation", "{45072D26-9802-446B-B67E-8CFF847A10B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Booking.Simulation.API", "src\services\simulation\Booking.Simulation.API\Booking.Simulation.API.csproj", "{CC892F66-1C49-4BA9-9D7E-FCFE8AFAA9A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Booking.Simulation.API", "src\services\simulation\Booking.Simulation.API\Booking.Simulation.API.csproj", "{CC892F66-1C49-4BA9-9D7E-FCFE8AFAA9A4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Booking", "Booking", "{90F8963C-C4A6-43DF-A12C-63458D3B2FAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Booking.API", "src\services\booking\Booking.API\Booking.API.csproj", "{088A6C1A-68D5-46F7-9B86-DF699B799E18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Booking.API", "src\services\booking\Booking.API\Booking.API.csproj", "{088A6C1A-68D5-46F7-9B86-DF699B799E18}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Vehicles", "Vehicles", "{2A17C5CB-716D-466B-B7F9-16879E9F1496}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vehicles.API", "src\services\vehicles\Vehicles.API\Vehicles.API.csproj", "{F964FDF2-2D5F-413F-8E0B-C232356B2284}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vehicles.API", "src\services\vehicles\Vehicles.API\Vehicles.API.csproj", "{F964FDF2-2D5F-413F-8E0B-C232356B2284}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{11BA01C3-B643-4BEC-A21F-57947E3CAA3A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EventBus", "EventBus", "{D126A8B1-5680-4A46-AE05-79C37AD3D02A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sdk.EventBus", "src\BuildingBlocks\BuildingBlocks.EventBus\Sdk.EventBus.csproj", "{3E626086-33F2-4214-8315-0F60AC8113CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sdk.EventBus", "src\BuildingBlocks\BuildingBlocks.EventBus\Sdk.EventBus.csproj", "{3E626086-33F2-4214-8315-0F60AC8113CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sdk.EventBusRabbitMQ", "src\BuildingBlocks\EventBus\BuildingBlocks.EventBusRabbitMQ\Sdk.EventBusRabbitMQ.csproj", "{CAB86A5E-4A3A-4E01-9135-210093F2926C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sdk.EventBusRabbitMQ", "src\BuildingBlocks\EventBus\BuildingBlocks.EventBusRabbitMQ\Sdk.EventBusRabbitMQ.csproj", "{CAB86A5E-4A3A-4E01-9135-210093F2926C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sdk.EventLogEF", "src\BuildingBlocks\EventBus\Sdk.EventLogEF\Sdk.EventLogEF.csproj", "{CA569B10-7B93-4A8F-BA53-1A39C1FF9FAF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "img", "img", "{F19892FA-0BCF-4837-BE21-94B7EE79F8BA}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Users\137222\Downloads\booking vehicle.png = ..\..\Users\137222\Downloads\booking vehicle.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
