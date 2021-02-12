@@ -31,10 +31,27 @@ Microserviço de reserva irá efetivar a reserva do veículo no período solicit
 
 Microserviço de checklist do veículo para finalizar a reserva e obter o valor final.
 
-## Vehicles.API 
+### Vehicles.API 
 
 Microserviço que contém todos os carros disponível para locação de acordo com agenda.
 
-## Event Bus 
+### Event Bus 
 
 Processo async/sync de mensageria para integração desacoplada das API.
+
+## Roadmap
+
+## Identity.Api 
+
+Criação de Api de autenticação/autorização dos usuários descentralizado.
+
+## Utilização do padrão BFF
+
+Utilizar o padrão para API de backend servindo aos frontend. 
+
+## GRPC
+
+Fazer a comunicação interna entre o BFF e os microserviços.O gRPC é um protocolo de comunicação de alta performance, baseado no http/2 e protocolos de buffers.
+
+
+
