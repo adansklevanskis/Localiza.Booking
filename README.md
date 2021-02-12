@@ -53,7 +53,7 @@ Utilizar o padrão para API de backend servindo aos frontend.
 
 ### GRPC
 
-Fazer a comunicação interna entre o BFF e os microserviços.O gRPC é um protocolo de comunicação de alta performance, baseado no http/2 e protocolos de buffers.
+Fazer a comunicação interna entre o BFF e os microserviços. O gRPC é um protocolo de comunicação de alta performance, baseado no http/2 e protocolos de buffers.
 
 
 
