@@ -39,17 +39,19 @@ Microserviço que contém todos os carros disponível para locação de acordo c
 
 Processo async/sync de mensageria para integração desacoplada das API.
 
+
+
 ## Roadmap
 
-## Identity.Api 
+### Identity.Api 
 
 Criação de Api de autenticação/autorização dos usuários descentralizado.
 
-## Utilização do padrão BFF
+### Utilização do padrão BFF
 
 Utilizar o padrão para API de backend servindo aos frontend. 
 
-## GRPC
+### GRPC
 
 Fazer a comunicação interna entre o BFF e os microserviços.O gRPC é um protocolo de comunicação de alta performance, baseado no http/2 e protocolos de buffers.
 
