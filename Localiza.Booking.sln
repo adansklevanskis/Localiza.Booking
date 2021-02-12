@@ -31,13 +31,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sdk.EventBus", "src\Buildin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sdk.EventBusRabbitMQ", "src\BuildingBlocks\EventBus\BuildingBlocks.EventBusRabbitMQ\Sdk.EventBusRabbitMQ.csproj", "{CAB86A5E-4A3A-4E01-9135-210093F2926C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sdk.EventLogEF", "src\BuildingBlocks\EventBus\Sdk.EventLogEF\Sdk.EventLogEF.csproj", "{CA569B10-7B93-4A8F-BA53-1A39C1FF9FAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sdk.EventLogEF", "src\BuildingBlocks\EventBus\Sdk.EventLogEF\Sdk.EventLogEF.csproj", "{CA569B10-7B93-4A8F-BA53-1A39C1FF9FAF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "img", "img", "{F19892FA-0BCF-4837-BE21-94B7EE79F8BA}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\Users\137222\Downloads\booking vehicle.png = ..\..\Users\137222\Downloads\booking vehicle.png
 		..\..\Users\137222\Downloads\Microsservicos.png = ..\..\Users\137222\Downloads\Microsservicos.png
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Booking.Domain", "src\services\booking\Booking.Domain\Booking.Domain.csproj", "{B23519C5-05F0-4551-B497-BAF8B6E5C7D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Booking.Infrastructure", "src\services\booking\Booking.Infrastructure\Booking.Infrastructure.csproj", "{A9C52C2D-B3AF-4D02-8B47-F70E62A1176D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Booking.UnitTests", "src\services\booking\Booking.UnitTests\XUnitTestProject1\Booking.UnitTests.csproj", "{AA292202-D49F-4FBA-9575-1018676ABDB9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +79,18 @@ Global
 		{CA569B10-7B93-4A8F-BA53-1A39C1FF9FAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA569B10-7B93-4A8F-BA53-1A39C1FF9FAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA569B10-7B93-4A8F-BA53-1A39C1FF9FAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B23519C5-05F0-4551-B497-BAF8B6E5C7D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B23519C5-05F0-4551-B497-BAF8B6E5C7D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B23519C5-05F0-4551-B497-BAF8B6E5C7D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B23519C5-05F0-4551-B497-BAF8B6E5C7D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9C52C2D-B3AF-4D02-8B47-F70E62A1176D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9C52C2D-B3AF-4D02-8B47-F70E62A1176D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9C52C2D-B3AF-4D02-8B47-F70E62A1176D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9C52C2D-B3AF-4D02-8B47-F70E62A1176D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA292202-D49F-4FBA-9575-1018676ABDB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA292202-D49F-4FBA-9575-1018676ABDB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA292202-D49F-4FBA-9575-1018676ABDB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA292202-D49F-4FBA-9575-1018676ABDB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,6 +110,9 @@ Global
 		{3E626086-33F2-4214-8315-0F60AC8113CD} = {D126A8B1-5680-4A46-AE05-79C37AD3D02A}
 		{CAB86A5E-4A3A-4E01-9135-210093F2926C} = {D126A8B1-5680-4A46-AE05-79C37AD3D02A}
 		{CA569B10-7B93-4A8F-BA53-1A39C1FF9FAF} = {D126A8B1-5680-4A46-AE05-79C37AD3D02A}
+		{B23519C5-05F0-4551-B497-BAF8B6E5C7D8} = {90F8963C-C4A6-43DF-A12C-63458D3B2FAB}
+		{A9C52C2D-B3AF-4D02-8B47-F70E62A1176D} = {90F8963C-C4A6-43DF-A12C-63458D3B2FAB}
+		{AA292202-D49F-4FBA-9575-1018676ABDB9} = {90F8963C-C4A6-43DF-A12C-63458D3B2FAB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E443BAFF-B49E-4D49-81B6-659A338B44DF}

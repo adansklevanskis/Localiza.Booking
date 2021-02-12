@@ -4,5 +4,18 @@
         <name>Vehicles.API</name>
     </assembly>
     <members>
+        <member name="T:Vehicles.API.Infraestructure.VehicleContext">
+            <summary>
+            Class Vehicle Context
+            </summary>
+        </member>
+        <member name="M:Vehicles.API.Model.Vehicle.AddSchedule(System.DateTime,System.DateTime)">
+            <summary>
+            Add new schedule
+            </summary>
+            <param name="startTime"></param>
+            <param name="endTime"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

@@ -20,6 +20,7 @@ namespace Vehicles.API.Infraestructure
         {
             modelBuilder.ApplyConfiguration(new VehicleBrandEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new VehicleTypeEntityTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new ScheduleEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new VehicleEntityTypeConfiguration());
         }
     }

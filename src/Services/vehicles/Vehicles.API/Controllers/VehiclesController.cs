@@ -1,5 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Threading.Tasks;
+using Vehicles.API.Infraestructure;
+using Vehicles.API.IntegrationEvents;
+using Vehicles.API.Model;
+using Vehicles.API.ViewModel;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -10,35 +19,38 @@ namespace Vehicles.API.Controllers
     public class VehiclesController : ControllerBase
     {
         // GET: api/<VehiclesController>
+        private readonly VehicleContext _vehicleContext;
+        private readonly ICatalogIntegrationEventService _vehicleIntegrationEventService;
+
+        public VehiclesController(VehicleContext context, ICatalogIntegrationEventService catalogIntegrationEventService)
+        {
+            _vehicleContext = context ?? throw new ArgumentNullException(nameof(context));
+            _vehicleIntegrationEventService = catalogIntegrationEventService ?? throw new ArgumentNullException(nameof(catalogIntegrationEventService));
+
+            context.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
+        }
+
+
+        // GET api/v1/[controller][?pageSize=3&pageIndex=10]
         [HttpGet]
-        public IEnumerable<string> Get()
+        [Route("")]
+        [ProducesResponseType(typeof(PaginatedItemsViewModel<Vehicle>), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(IEnumerable<Vehicle>), (int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        public async Task<IActionResult> VehiclesAsync([FromQuery] int pageSize = 10, [FromQuery] int pageIndex = 0)
         {
-            return new string[] { "value1", "value2" };
-        }
+            var totalItems = await _vehicleContext.Vehicles
+               .LongCountAsync();
 
-        // GET api/<VehiclesController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
+            var itemsOnPage = await _vehicleContext.Vehicles
+                .OrderBy(c => c.Id)
+                .Skip(pageSize * pageIndex)
+                .Take(pageSize)
+                .ToListAsync();
 
-        // POST api/<VehiclesController>
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
+            var model = new PaginatedItemsViewModel<Vehicle>(pageIndex, pageSize, totalItems, itemsOnPage);
 
-        // PUT api/<VehiclesController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<VehiclesController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            return Ok(model);
         }
     }
 }

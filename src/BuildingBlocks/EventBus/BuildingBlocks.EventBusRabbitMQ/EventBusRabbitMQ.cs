@@ -212,16 +212,14 @@ namespace Sdk.EventBusRabbitMQ
                 }
 
                 await ProcessEvent(eventName, message);
+                _consumerChannel.BasicAck(eventArgs.DeliveryTag, multiple: false);
             }
             catch (Exception ex)
             {
-                _logger.LogWarning(ex, "----- ERROR Processing message \"{Message}\"", message);
+                _consumerChannel.BasicReject(eventArgs.DeliveryTag, false);
+                _logger.LogWarning(ex, "----- ERROR Processing message \"{Message}\" message discarded", message);
             }
 
-            // Even on exception we take the message off the queue.
-            // in a REAL WORLD app this should be handled with a Dead Letter Exchange (DLX). 
-            // For more information see: https://www.rabbitmq.com/dlx.html
-            _consumerChannel.BasicAck(eventArgs.DeliveryTag, multiple: false);
         }
 
         private IModel CreateConsumerChannel()

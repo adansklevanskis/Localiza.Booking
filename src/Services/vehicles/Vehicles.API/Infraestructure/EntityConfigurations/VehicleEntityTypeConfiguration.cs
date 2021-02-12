@@ -39,6 +39,10 @@ namespace Vehicles.API.Infraestructure.EntityConfigurations
             builder.HasOne(ci => ci.VehicleType)
                .WithMany()
                .HasForeignKey(ci => ci.VehicleTypeId);
+
+            builder.HasMany(ci => ci.Schedules)
+                .WithOne()
+                .HasForeignKey(c => c.Id);
         }
     }
 }
